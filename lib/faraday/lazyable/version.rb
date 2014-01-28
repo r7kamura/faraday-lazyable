@@ -1,5 +1,5 @@
 module Faraday
-  module Lazyable
+  class Lazyable
     VERSION = "0.0.1"
   end
 end
