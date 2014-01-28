@@ -34,7 +34,8 @@ to improve performance.
 ```ruby
 class RecipesController < ApplicationController
   def show
-    @recipe = client.get("http://example.com/recipes/#{params[:id]}")
+    response = client.get("http://example.com/recipes/#{params[:id]}")
+    @recipe = Recipe.new(response)
   end
 
   private
