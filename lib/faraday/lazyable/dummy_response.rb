@@ -9,10 +9,6 @@ module Faraday
         @block = block
       end
 
-      def respond_to?(method_name)
-        __response__.respond_to?(method_name)
-      end
-
       private
 
       def method_missing(method_name, *args, &block)
